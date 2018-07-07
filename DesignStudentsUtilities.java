@@ -27,28 +27,56 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel1.setText("         Welcome To Student's Utilities!");
+        jPanel1.setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("          Student's Utilities");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(170, 70, 710, 60);
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic", 2, 21)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(250, 250, 250));
+        jLabel3.setText("             Be an organized and strategic student! ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(250, 160, 580, 50);
+
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(245, 245, 245));
+        jButton1.setText("Log in");
+        jPanel1.add(jButton1);
+        jButton1.setBounds(410, 330, 230, 70);
+
+        jButton2.setBackground(new java.awt.Color(51, 153, 255));
+        jButton2.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(245, 245, 245));
+        jButton2.setText("Sign up");
+        jPanel1.add(jButton2);
+        jButton2.setBounds(410, 450, 230, 70);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 1050, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1050, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(651, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
 
         pack();
@@ -90,6 +118,11 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
