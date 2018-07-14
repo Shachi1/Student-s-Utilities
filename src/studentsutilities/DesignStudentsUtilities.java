@@ -14,8 +14,11 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
     /**
      * Creates new form DesignStudentsUtilities
      */
+    
     public DesignStudentsUtilities() {
+        
         initComponents();
+        //setVisible
     }
 
     /**
@@ -30,11 +33,12 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(450, 160));
 
         jPanel1.setLayout(null);
 
@@ -50,19 +54,30 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(250, 160, 580, 50);
 
-        jButton1.setBackground(new java.awt.Color(51, 153, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(245, 245, 245));
-        jButton1.setText("Log in");
-        jPanel1.add(jButton1);
-        jButton1.setBounds(410, 330, 230, 70);
+        jButton7.setBackground(new java.awt.Color(0, 102, 153));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Start With A New Semester");
+        jButton7.setActionCommand("Start With A New Semester");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7);
+        jButton7.setBounds(340, 460, 370, 80);
 
-        jButton2.setBackground(new java.awt.Color(51, 153, 255));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(245, 245, 245));
-        jButton2.setText("Sign up");
-        jPanel1.add(jButton2);
-        jButton2.setBounds(410, 450, 230, 70);
+        jButton8.setBackground(new java.awt.Color(0, 102, 153));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("Continue With The Current Semester");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton8);
+        jButton8.setBounds(340, 330, 370, 80);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -81,6 +96,18 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        Form ob=new Form();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        Home ob=new Home();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +145,8 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
