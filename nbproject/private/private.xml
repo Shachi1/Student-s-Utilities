@@ -4,8 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/DesignStudentsUtilities.java</file>
-            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/SecondPage.java</file>
-            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/ThirdPage.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/Rsources.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/Home.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/CGPA.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/Routine.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/Event.java</file>
+            <file>file:/D:/SD2.1/StudentsUtilities/src/studentsutilities/Form.java</file>
         </group>
     </open-files>
 </project-private>
