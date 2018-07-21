@@ -38,6 +38,7 @@ public class CGPA extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
 
+        jPanel1.setMinimumSize(new java.awt.Dimension(1050, 700));
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 40)); // NOI18N
@@ -46,8 +47,7 @@ public class CGPA extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(463, 34, 141, 61);
 
-        jTable2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jTable2.setForeground(new java.awt.Color(0, 153, 204));
+        jTable2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -62,7 +62,7 @@ public class CGPA extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Course Name", "Credits", "My Credit"
             }
         ));
         jTable2.setRowHeight(35);
@@ -94,11 +94,11 @@ public class CGPA extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1050, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -16,6 +19,10 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+    }
+    public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
     }
 
     /**
@@ -35,7 +42,7 @@ public class Home extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1050, 700));
@@ -120,24 +127,28 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         Resources ob=new Resources();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Event ob=new Event();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         Routine ob=new Routine();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         CGPA ob=new CGPA();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

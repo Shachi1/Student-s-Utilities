@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -19,7 +22,10 @@ public class Form extends javax.swing.JFrame {
         ob1.setVisible(false);
         initComponents();
     }
-
+    public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,12 +45,15 @@ public class Form extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
-        setPreferredSize(new java.awt.Dimension(1050, 700));
-        setSize(new java.awt.Dimension(1050, 700));
+        setMaximumSize(new java.awt.Dimension(1060, 725));
+        setPreferredSize(new java.awt.Dimension(1060, 725));
+        setSize(new java.awt.Dimension(1060, 725));
         getContentPane().setLayout(null);
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(1050, 700));
+        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.setLayout(null);
 
@@ -107,7 +116,7 @@ public class Form extends javax.swing.JFrame {
         jLabel8.setBounds(0, 0, 1050, 700);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1050, 700);
+        jPanel1.setBounds(0, 0, 1060, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,6 +131,7 @@ public class Form extends javax.swing.JFrame {
         // TODO add your handling code here:
         Home ob=new Home();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

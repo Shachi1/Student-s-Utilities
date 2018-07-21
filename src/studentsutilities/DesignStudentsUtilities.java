@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -19,6 +22,10 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
         
         initComponents();
         //setVisible
+    }
+    public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
     }
 
     /**
@@ -37,7 +44,7 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
 
         jPanel1.setLayout(null);
@@ -100,12 +107,16 @@ public class DesignStudentsUtilities extends javax.swing.JFrame {
         // TODO add your handling code here:
         Form ob1=new Form();
         ob1.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        
+        
         Home ob=new Home();
         ob.setVisible(true);
+        close();
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
