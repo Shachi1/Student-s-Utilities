@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -33,9 +36,11 @@ public class CGPA extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
 
         jPanel1.setMinimumSize(new java.awt.Dimension(1050, 700));
@@ -85,10 +90,24 @@ public class CGPA extends javax.swing.JFrame {
         jPanel1.add(jTextField1);
         jTextField1.setBounds(570, 560, 196, 50);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/is.jpg"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(30, 30, 40, 40);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 1050, 700);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
+        jLabel3.setText("jLabel2");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(0, 0, 1050, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,12 +122,22 @@ public class CGPA extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Home ob=new Home();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        close();
+        Home ob=new Home();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,8 +176,10 @@ public class CGPA extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;

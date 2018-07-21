@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -29,9 +32,11 @@ public class Event extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1050, 700));
@@ -44,11 +49,25 @@ public class Event extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(440, 40, 190, 60);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/is.jpg"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(30, 30, 40, 40);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1050, 700);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
+        jLabel3.setText("jLabel2");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(0, 0, 1050, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,6 +82,16 @@ public class Event extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+    }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        close();
+        Home ob=new Home();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,8 +129,10 @@ public class Event extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
