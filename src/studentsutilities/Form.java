@@ -5,6 +5,9 @@
  */
 package studentsutilities;
 
+import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author mehja
@@ -19,7 +22,10 @@ public class Form extends javax.swing.JFrame {
         ob1.setVisible(false);
         initComponents();
     }
-
+    public void close(){
+        WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,58 +35,40 @@ public class Form extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
-        setPreferredSize(new java.awt.Dimension(1050, 700));
+        setMaximumSize(new java.awt.Dimension(1060, 725));
+        setPreferredSize(new java.awt.Dimension(1060, 725));
+        setSize(new java.awt.Dimension(1060, 725));
         getContentPane().setLayout(null);
 
-        jTextField1.setBackground(new java.awt.Color(215, 215, 215));
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(300, 420, 500, 28);
+        jPanel1.setMaximumSize(new java.awt.Dimension(1050, 700));
+        jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1050, 700));
+        jPanel1.setLayout(null);
 
-        jTextField2.setBackground(new java.awt.Color(215, 215, 215));
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(300, 520, 500, 28);
+        jLabel1.setBackground(new java.awt.Color(102, 255, 102));
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 40)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(250, 250, 250));
+        jLabel1.setText("Just a few steps...");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(90, 70, 645, 60);
 
-        jTextField3.setBackground(new java.awt.Color(215, 215, 215));
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(300, 220, 500, 28);
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1.1", "1.2", "2.1", "2.2", "3.1", "3.2", "4.1", "4.2" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(300, 320, 500, 30);
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel5.setText("* Please write the course names and press enter to include ,");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(100, 260, 710, 30);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Next");
@@ -89,53 +77,46 @@ public class Form extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(863, 593, 110, 50);
+        jPanel1.add(jButton1);
+        jButton1.setBounds(900, 620, 110, 50);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel4.setText("Username: ");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 210, 120, 43);
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1.1", "1.2", "2.1", "2.2", "3.1", "3.2", "4.1", "4.2" }));
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(300, 160, 500, 30);
 
-        jLabel1.setBackground(new java.awt.Color(102, 255, 102));
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 40)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(250, 250, 250));
-        jLabel1.setText("Just a few steps...");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 70, 645, 60);
-
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel3.setText("Credits: ");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 510, 160, 43);
-
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel5.setText("Semester: ");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(90, 320, 120, 30);
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel7.setText("Semester: ");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(100, 170, 120, 30);
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
         jLabel6.setText("Course Name: ");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(90, 410, 160, 43);
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(100, 350, 160, 43);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1050, 700));
-        jPanel1.setLayout(null);
+        jTextField1.setBackground(new java.awt.Color(215, 215, 215));
+        jTextField1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(300, 360, 500, 180);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
         jLabel8.setMaximumSize(new java.awt.Dimension(1050, 700));
-        jLabel8.setMinimumSize(new java.awt.Dimension(1050, 700));
+        jLabel8.setMinimumSize(new java.awt.Dimension(0, 0));
         jLabel8.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel8);
         jLabel8.setBounds(0, 0, 1050, 700);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1050, 700);
+        jPanel1.setBounds(0, 0, 1060, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,18 +127,11 @@ public class Form extends javax.swing.JFrame {
       //  jTextField1.setText("");
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Home ob=new Home();
         ob.setVisible(true);
+        close();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -200,14 +174,11 @@ public class Form extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

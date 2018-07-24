@@ -12,12 +12,12 @@ import java.awt.event.WindowEvent;
  *
  * @author mehja
  */
-public class Event extends javax.swing.JFrame {
+public class Resources extends javax.swing.JFrame {
 
     /**
-     * Creates new form Event
+     * Creates new form Rsources
      */
-    public Event() {
+    public Resources() {
         initComponents();
     }
 
@@ -34,7 +34,6 @@ public class Event extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
@@ -45,9 +44,9 @@ public class Event extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(102, 255, 102));
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Events");
+        jLabel2.setText("Resources");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(440, 40, 190, 60);
+        jLabel2.setBounds(410, 40, 250, 60);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/is.jpg"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -63,11 +62,6 @@ public class Event extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1050, 700);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
-        jLabel3.setText("jLabel2");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 0, 1050, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,20 +104,21 @@ public void close(){
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Event.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Resources.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Event().setVisible(true);
+                new Resources().setVisible(true);
             }
         });
     }
@@ -132,7 +127,6 @@ public void close(){
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
