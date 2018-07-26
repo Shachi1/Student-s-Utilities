@@ -5,8 +5,10 @@
  */
 package studentsutilities;
 
+import java.awt.Desktop;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import java.io.File;
 
 /**
  *
@@ -17,6 +19,7 @@ public class Home extends javax.swing.JFrame {
     /**
      * Creates new form ThirdPage
      */
+    
     public Home() {
         initComponents();
     }
@@ -141,6 +144,9 @@ public class Home extends javax.swing.JFrame {
         Resources ob=new Resources();
         ob.setVisible(true);
         close();
+        
+        
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

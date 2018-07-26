@@ -5,8 +5,11 @@
  */
 package studentsutilities;
 
+import java.awt.Desktop;
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -19,6 +22,12 @@ public class Resources extends javax.swing.JFrame {
      */
     public Resources() {
         initComponents();
+    }
+    public void viewFiles(String filePath){
+        try{
+            Desktop.getDesktop().open(new File(filePath));
+        }
+        catch(Exception e){}
     }
 
     /**
@@ -33,6 +42,8 @@ public class Resources extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -57,11 +68,34 @@ public class Resources extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(30, 30, 40, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 153, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setText("Browse");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(270, 200, 200, 80);
+
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton2.setLabel("Add new");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(650, 200, 170, 80);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/resourse.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.setPreferredSize(new java.awt.Dimension(1050, 700));
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel1.setPreferredSize(new java.awt.Dimension(1080, 675));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1050, 700);
+        jLabel1.setBounds(0, 0, 1080, 700);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,6 +120,18 @@ public void close(){
         Home ob=new Home();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String filePath="D:/Google drive/2.1/CSE 2.1 All sheets _ Books";
+        viewFiles(filePath);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JFileChooser ch=new JFileChooser();
+        ch.showOpenDialog(null);
+        //File f=ch.getSelectedFile();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +170,8 @@ public void close(){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
