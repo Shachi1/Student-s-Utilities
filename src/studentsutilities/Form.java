@@ -7,13 +7,14 @@ package studentsutilities;
 
 import java.awt.Toolkit;
 import java.awt.event.WindowEvent;
+import javax.swing.JFileChooser;
 
 /**
  *
  * @author mehja
  */
 public class Form extends javax.swing.JFrame {
-
+    String resourceDirectory;
     /**
      * Creates new form SecondPage
      */
@@ -43,12 +44,15 @@ public class Form extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(450, 160));
         setMaximumSize(new java.awt.Dimension(1060, 725));
-        setPreferredSize(new java.awt.Dimension(1060, 725));
+        setPreferredSize(new java.awt.Dimension(1050, 700));
         setSize(new java.awt.Dimension(1060, 725));
         getContentPane().setLayout(null);
 
@@ -68,7 +72,7 @@ public class Form extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
         jLabel5.setText("* Please write the course names and press enter to include ,");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(100, 260, 710, 30);
+        jLabel5.setBounds(90, 280, 710, 30);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Next");
@@ -78,7 +82,7 @@ public class Form extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(900, 620, 110, 50);
+        jButton1.setBounds(820, 590, 130, 60);
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1.1", "1.2", "2.1", "2.2", "3.1", "3.2", "4.1", "4.2" }));
@@ -105,7 +109,24 @@ public class Form extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(300, 360, 500, 180);
+        jTextField1.setBounds(300, 350, 500, 50);
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel10.setText("* Please set a directory where you want to keep your resources");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(100, 440, 710, 30);
+
+        jButton2.setBackground(new java.awt.Color(0, 102, 255));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton2.setText("Set directory");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(270, 500, 310, 50);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/1stBack.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
@@ -114,6 +135,12 @@ public class Form extends javax.swing.JFrame {
         jLabel8.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel8);
         jLabel8.setBounds(0, 0, 1050, 700);
+
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("* Please write the course names and press enter to include ,");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(100, 260, 710, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1060, 700);
@@ -133,6 +160,18 @@ public class Form extends javax.swing.JFrame {
         ob.setVisible(true);
         close();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JFileChooser fl=new JFileChooser();
+        fl.setDialogTitle("Set Directory");
+        fl.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        //fl.showOpenDialog(null);
+        if(fl.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+            
+        }
+        resourceDirectory=fl.getSelectedFile().getAbsolutePath();
+        System.out.println(resourceDirectory);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,12 +211,15 @@ public class Form extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

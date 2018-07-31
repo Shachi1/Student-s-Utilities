@@ -2,9 +2,11 @@
 package studentsutilities;
 import java.io.File;
 import java.awt.Desktop;
+import javax.swing.JFileChooser;
 
 
 public class resourseInOut {
+    public String resourceDirectory;
     public void viewFiles(String filePath){
         //Desktop.getDesktop().open(new File(filePath));
         try{
@@ -12,9 +14,15 @@ public class resourseInOut {
         }
         catch(Exception e){}
     }
-    public static void main(String args[]){
-        String filePath="D:/Google drive/2.1/CSE 2.1 All sheets _ Books";
-        resourseInOut ob=new resourseInOut();
-        ob.viewFiles(filePath);
+    
+    public void getFolderDirectory(){
+        JFileChooser fl=new JFileChooser();
+        fl.setDialogTitle("Set Directory");
+        fl.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        /*if(fl.showOpenDialog(openFileChooser) == JFileChooser.APPROVE_OPTION){
+            
+        }*/
+        resourceDirectory=fl.getSelectedFile().getAbsolutePath();
     }
+    
 }

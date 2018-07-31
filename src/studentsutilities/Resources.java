@@ -56,6 +56,7 @@ public class Resources extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Resources");
+        jLabel2.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel2);
         jLabel2.setBounds(410, 40, 250, 60);
 
@@ -93,9 +94,11 @@ public class Resources extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentsutilities/images/resourse.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1080, 675));
+        jLabel1.setMaximumSize(new java.awt.Dimension(1050, 700));
+        jLabel1.setMinimumSize(new java.awt.Dimension(1050, 700));
+        jLabel1.setPreferredSize(new java.awt.Dimension(1050, 700));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1080, 700);
+        jLabel1.setBounds(0, -10, 1080, 690);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,7 +108,9 @@ public class Resources extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,7 +129,6 @@ public void close(){
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String filePath="D:/Google drive/2.1/CSE 2.1 All sheets _ Books";
         viewFiles(filePath);
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
